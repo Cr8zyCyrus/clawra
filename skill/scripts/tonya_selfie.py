@@ -118,7 +118,7 @@ def generate_tonya_selfie(user_context: str, mode: str = "auto", channel: str = 
     # 使用即梦图生图生成
     print("Generating selfie with Jimeng...")
     output_paths = generate_image_from_image(
-        image_path=reference_path,
+        image_source=reference_path,
         prompt=prompt,
         seed=None,  # 随机种子
         use_base64=True,
