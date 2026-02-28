@@ -107,6 +107,18 @@ git clone https://github.com/Cr8zyCyrus/clawra ~/.openclaw/skills/tonya-selfie
 "在咖啡馆的你是什么样"
 ```
 
+### 命令行使用
+
+**生成自拍：**
+```bash
+python3 skill/scripts/tonya_selfie.py "穿紫色瑜伽服在瑜伽房" --channel "telegram:@username"
+```
+
+**生成语音：**
+```bash
+python3 skill/scripts/tonya_voice.py "刚练完瑜伽，好累但好开心~" --channel "telegram:@username"
+```
+
 ## 参考图
 
 Tonya 的固定参考图托管在 CDN:
@@ -119,7 +131,8 @@ https://cdn.jsdelivr.net/gh/Cr8zyCyrus/clawra@main/skill/assets/tonya.jpg
 
 ## 技术细节
 
-- **图像生成**: xAI Grok Imagine via fal.ai
+- **图像生成**: 即梦图生图 API (Jimeng)
+- **语音合成**: FishAudio (Tonya 专属声音模型)
 - **消息发送**: OpenClaw Gateway API
 - **支持平台**: Discord, Telegram, WhatsApp, Slack, Signal, MS Teams
 
