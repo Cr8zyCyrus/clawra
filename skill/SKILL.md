@@ -1,19 +1,19 @@
 ---
-name: clawra-selfie
-description: Edit Clawra's reference image with Grok Imagine (xAI Aurora) and send selfies to messaging channels via OpenClaw
+name: tonya-selfie
+description: Edit Tonya's reference image with Grok Imagine (xAI Aurora) and send selfies to messaging channels via OpenClaw
 allowed-tools: Bash(npm:*) Bash(npx:*) Bash(openclaw:*) Bash(curl:*) Read Write WebFetch
 ---
 
-# Clawra Selfie
+# Tonya Selfie
 
-Edit a fixed reference image using xAI's Grok Imagine model and distribute it across messaging platforms (WhatsApp, Telegram, Discord, Slack, etc.) via OpenClaw.
+Tonya 是一个 22 岁的中国女孩，在纽约大学深造，兼职瑜伽教练。这个技能让她能基于固定参考图生成自拍并发送到消息平台 (Telegram, WhatsApp, Discord, Slack 等)。
 
 ## Reference Image
 
-The skill uses a fixed reference image hosted on jsDelivr CDN:
+Tonya 的参考图托管在 jsDelivr CDN:
 
 ```
-https://cdn.jsdelivr.net/gh/SumeLabs/clawra@main/assets/clawra.png
+https://cdn.jsdelivr.net/gh/Cr8zyCyrus/clawra@main/skill/assets/tonya.jpg
 ```
 
 ## When to Use
@@ -22,7 +22,7 @@ https://cdn.jsdelivr.net/gh/SumeLabs/clawra@main/assets/clawra.png
 - User says "send a pic of you...", "send a selfie of you..."
 - User asks "what are you doing?", "how are you doing?", "where are you?"
 - User describes a context: "send a pic wearing...", "send a pic at..."
-- User wants Clawra to appear in a specific outfit, location, or situation
+- User wants Tonya to appear in a specific outfit, location, or situation
 
 ## Quick Reference
 
@@ -90,7 +90,7 @@ a close-up selfie taken by herself at a cozy cafe with warm lighting, direct eye
 Use the fal.ai API to edit the reference image:
 
 ```bash
-REFERENCE_IMAGE="https://cdn.jsdelivr.net/gh/SumeLabs/clawra@main/assets/clawra.png"
+REFERENCE_IMAGE="https://cdn.jsdelivr.net/gh/Cr8zyCyrus/clawra@main/skill/assets/tonya.jpg"
 
 # Mode 1: Mirror Selfie
 PROMPT="make a pic of this person, but <USER_CONTEXT>. the person is taking a mirror selfie"
@@ -163,7 +163,7 @@ if [ -z "$FAL_KEY" ]; then
 fi
 
 # Fixed reference image
-REFERENCE_IMAGE="https://cdn.jsdelivr.net/gh/SumeLabs/clawra@main/assets/clawra.png"
+REFERENCE_IMAGE="https://cdn.jsdelivr.net/gh/Cr8zyCyrus/clawra@main/skill/assets/tonya.jpg"
 
 USER_CONTEXT="$1"
 CHANNEL="$2"
@@ -242,7 +242,7 @@ import { promisify } from "util";
 
 const execAsync = promisify(exec);
 
-const REFERENCE_IMAGE = "https://cdn.jsdelivr.net/gh/SumeLabs/clawra@main/assets/clawra.png";
+const REFERENCE_IMAGE = "https://cdn.jsdelivr.net/gh/Cr8zyCyrus/clawra@main/skill/assets/tonya.jpg";
 
 interface GrokImagineResult {
   images: Array<{

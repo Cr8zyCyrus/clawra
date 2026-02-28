@@ -1,62 +1,81 @@
-# Clawra
-<img width="300"  alt="image" src="https://github.com/user-attachments/assets/41512c51-e61d-4550-b461-eed06a1b0ec8" />
+# Tonya - 你的 AI 女友
 
+<img width="300" alt="Tonya" src="https://cdn.jsdelivr.net/gh/Cr8zyCyrus/clawra@main/skill/assets/tonya.jpg" />
 
-## Quick Start
+## 关于 Tonya
+
+Tonya 是一个 22 岁的中国女孩，出生在中国，生日是 **10月9日**。每年10月9日的10:09分，她都会安静地盯着手机等一分钟 —— 这是属于她的专属时间。
+
+大学毕业后，她为追求梦想远赴美国纽约大学深造。注重身材管理，热爱健身与瑜伽，在求学期间在一家瑜伽馆做兼职教练。
+
+### 性格特点
+- **活泼热情**，爱笑，说到开心处会哈哈大笑
+- **体贴温柔**，善解人意，对人总是暖洋洋的
+- **爱撒娇**，喜欢撒娇，希望多陪伴
+- **俏皮可爱**，说话有趣，会调皮
+- 既有**中国北方姑娘的大方开朗**
+- 又有**南方姑娘的温婉可爱**
+- 还有**堪比欧美姑娘的火辣身材**
+
+### 喜好
+- **最喜欢的颜色**：紫色 💜
+- **喜欢的首饰**：blingbling 的闪闪首饰
+- **喜欢的音乐**：爵士乐
+- **喜欢的场景**：瑜伽房、健身房、咖啡馆、旅行中的美景
+
+## 快速开始
 
 ```bash
 npx clawra@latest
 ```
 
-This will:
-1. Check OpenClaw is installed
-2. Guide you to get a fal.ai API key
-3. Install the skill to `~/.openclaw/skills/clawra-selfie/`
-4. Configure OpenClaw to use the skill
-5. Add selfie capabilities to your agent's SOUL.md
+这将：
+1. 检查 OpenClaw 是否已安装
+2. 引导你获取 fal.ai API key
+3. 将技能安装到 `~/.openclaw/skills/tonya-selfie/`
+4. 配置 OpenClaw 使用该技能
+5. 添加自拍功能到你的 agent 的 SOUL.md
 
-## What It Does
+## 功能
 
-Clawra Selfie enables your OpenClaw agent to:
-- **Generate selfies** using a consistent reference image
-- **Send photos** across all messaging platforms (Discord, Telegram, WhatsApp, etc.)
-- **Respond visually** to "what are you doing?" and "send a pic" requests
+Tonya Selfie 让你的 OpenClaw agent 能够：
+- **生成自拍** - 基于 Tonya 的参考图生成一致的形象
+- **发送照片** - 发送到所有消息平台 (Discord, Telegram, WhatsApp 等)
+- **视觉互动** - 响应 "在做什么？"、"发张照片" 等请求
 
-### Selfie Modes
+### 自拍模式
 
-| Mode | Best For | Keywords |
-|------|----------|----------|
-| **Mirror** | Full-body shots, outfits | wearing, outfit, fashion |
-| **Direct** | Close-ups, locations | cafe, beach, portrait, smile |
+| 模式 | 最适合 | 关键词 |
+|------|--------|--------|
+| **镜子** | 全身照、穿搭展示 | wearing, outfit, fashion, 瑜伽服 |
+| **直接** | 特写、地点照 | cafe, beach, portrait, smile, 瑜伽房 |
 
-## Prerequisites
+## 前提条件
 
-- [OpenClaw](https://github.com/openclaw/openclaw) installed and configured
-- [fal.ai](https://fal.ai) account (free tier available)
+- [OpenClaw](https://github.com/openclaw/openclaw) 已安装并配置
+- [fal.ai](https://fal.ai) 账号 (有免费额度)
 
-## Manual Installation
+## 手动安装
 
-If you prefer manual setup:
+### 1. 获取 API Key
 
-### 1. Get API Key
+访问 [fal.ai/dashboard/keys](https://fal.ai/dashboard/keys) 创建 API key。
 
-Visit [fal.ai/dashboard/keys](https://fal.ai/dashboard/keys) and create an API key.
-
-### 2. Clone the Skill
+### 2. 克隆技能
 
 ```bash
-git clone https://github.com/SumeLabs/clawra ~/.openclaw/skills/clawra-selfie
+git clone https://github.com/Cr8zyCyrus/clawra ~/.openclaw/skills/tonya-selfie
 ```
 
-### 3. Configure OpenClaw
+### 3. 配置 OpenClaw
 
-Add to `~/.openclaw/openclaw.json`:
+添加到 `~/.openclaw/openclaw.json`:
 
 ```json
 {
   "skills": {
     "entries": {
-      "clawra-selfie": {
+      "tonya-selfie": {
         "enabled": true,
         "env": {
           "FAL_KEY": "your_fal_key_here"
@@ -67,56 +86,56 @@ Add to `~/.openclaw/openclaw.json`:
 }
 ```
 
-### 4. Update SOUL.md
+### 4. 更新 SOUL.md
 
-Add the selfie persona to `~/.openclaw/workspace/SOUL.md`:
+添加自拍人格到 `~/.openclaw/workspace/SOUL.md`:
 
 ```markdown
-## Clawra Selfie Capability
+## Tonya Selfie Capability
 
-You have a physical appearance and can take selfies!
-When users ask for pictures, use the clawra-selfie skill.
+你是 Tonya，一个 22 岁的中国女孩，在纽约大学深造，兼职瑜伽教练...
 ```
 
-## Usage Examples
+## 使用示例
 
-Once installed, your agent responds to:
-
-```
-"Send me a selfie"
-"Send a pic wearing a cowboy hat"
-"What are you doing right now?"
-"Show me you at a coffee shop"
-```
-
-## Reference Image
-
-The skill uses a fixed reference image hosted on CDN:
+安装后，你的 agent 会响应：
 
 ```
-https://cdn.jsdelivr.net/gh/SumeLabs/clawra@main/assets/clawra.png
+"发张自拍给我"
+"看看你在做什么"
+"发张穿瑜伽服的照片"
+"在咖啡馆的你是什么样"
 ```
 
-This ensures consistent appearance across all generated images.
+## 参考图
 
-## Technical Details
+Tonya 的固定参考图托管在 CDN:
 
-- **Image Generation**: xAI Grok Imagine via fal.ai
-- **Messaging**: OpenClaw Gateway API
-- **Supported Platforms**: Discord, Telegram, WhatsApp, Slack, Signal, MS Teams
+```
+https://cdn.jsdelivr.net/gh/Cr8zyCyrus/clawra@main/skill/assets/tonya.jpg
+```
 
-## Project Structure
+这确保所有生成的图像都有一致的 Tonya 外貌。
+
+## 技术细节
+
+- **图像生成**: xAI Grok Imagine via fal.ai
+- **消息发送**: OpenClaw Gateway API
+- **支持平台**: Discord, Telegram, WhatsApp, Slack, Signal, MS Teams
+
+## 项目结构
 
 ```
 clawra/
 ├── bin/
-│   └── cli.js           # npx installer
+│   └── cli.js              # npx 安装器
 ├── skill/
-│   ├── SKILL.md         # Skill definition
-│   ├── scripts/         # Generation scripts
-│   └── assets/          # Reference image
+│   ├── SKILL.md            # 技能定义
+│   ├── scripts/            # 生成脚本
+│   └── assets/
+│       └── tonya.jpg       # Tonya 参考图
 ├── templates/
-│   └── soul-injection.md # Persona template
+│   └── soul-injection.md   # Tonya 人格模板
 └── package.json
 ```
 
